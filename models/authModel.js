@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
+
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -32,6 +33,6 @@ UserSchema.methods.comparePassword = function(password) {
   return bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model('Admin', UserSchema);
 
 module.exports = User;
