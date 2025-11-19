@@ -12,7 +12,6 @@ app.use(cors());
 
 
 connectDB();
-app.use('/api/auth', require('./routes/authRoutes'))
 app.use('/api/messages', require('./routes/messageRoute'))
 app.use('/api/projects', require('./routes/projectRoute'));
 app.use('/api/experience', require('./routes/expericenceRoute'));
